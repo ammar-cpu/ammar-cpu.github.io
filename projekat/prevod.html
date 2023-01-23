@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Projekat-Sajt za piceriju</title>
+
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+      <a href="#home" class="logo"> <img src="images/logo.png" width="100px" height="100px" ></a>
+
+      <nav class="navbar">
+         <a href="#home">pocetna</a>
+         <a href="#about">o nama</a>
+         <a href="#menu">meni</a>
+         <a href="#order">naruci</a>
+         <a href="#faq">pitanja</a>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="order-btn" class="fas fa-box"></div>
+         <div id="cart-btn" class="fas fa-shopping-cart"><span>(4)</span></div>
+         <div id="lang-btn" onclick="window.location.href='index.html'" class="fas fa-language"></div>
+      </div>
+
+   </section>
+
+</header>
+
+ <!-- header section ends -->
+
+<div class="user-account">
+
+   <section>
+
+      <div id="close-account"><span>zatvori</span></div>
+
+      <div class="user">
+         <p><span>niste ulogovani!</span></p>
+      </div>
+
+      <div class="display-orders">
+         <p>pizza-1 <span>( $3/- x 2 )</span></p>
+         <p>pizza 03 <span>( $2/- x 1 )</span></p>
+         <p>pizza 06 <span>( $4/- x 4 )</span></p>
+         <p>pizza 07 <span>( $2/- x 1 )</span></p>
+      </div>
+
+      <div class="flex">
+
+         <form action="" method="post">
+            <h3>ulogujte se</h3>
+            <input type="email" name="email" required class="box" placeholder="unesite vas email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="unesite vasu sifru" maxlength="20">
+            <input type="submit" value="login now" name="login" class="btn">
+         </form>
+
+         <form action="" method="post">
+            <h3>registrujte se</h3>
+            <input type="text" name="name" required class="box" placeholder="unesite vase ime" maxlength="20">
+            <input type="email" name="email" required class="box" placeholder="unesite vas email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="unesite vasu sifru" maxlength="20">
+            <input type="password" name="cpass" required class="box" placeholder="potvrdite vasu sifru" maxlength="20">
+            <input type="submit" value="registujte se" name="register" class="btn">
+         </form>
+
+      </div>
+
+   </section>
+
+</div>
+
+<div class="my-orders">
+
+   <section>
+
+      <div id="close-orders"><span>zatvori</span></div>
+
+      <h3 class="title"> moje porudzbine </h3>
+
+      <div class="box">
+         <p>naruceno datuma: <span>06/01/2023</span> </p>
+         <p>ime : <span>osman jejna</span> </p>
+         <p>broj : <span>1234567890</span></p>
+         <p>adresa : <span> hadzet bb, novi pazar, serbia - 36300</span></p>
+         <p>metod placanja : <span>placanje pouzecem</span></p>
+         <p>tvoje porudzbine : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+         <p>ukupna cena : <span>$11/-</span></p>
+         <p>status placanja : <span style="color: var(--red);">na cekanju</span> </p>
+      </div>
+
+      <div class="box">
+         <p>naruceno datuma : <span>06/01/2023</span> </p>
+         <p>ime : <span>emin perunicic</span> </p>
+         <p>broj : <span>1234567890</span></p>
+         <p>adresa : <span>solitaire flat no.10 , avnoja bb, novi pazar, serbia - 36300</span></p>
+         <p>metod placanja : <span>cash on delivery</span></p>
+         <p>tvoje porudzbine : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+         <p>ukupna cena : <span>$11/-</span></p>
+         <p>status placanja : <span style="color: var(--red);">na cekanju</span> </p>
+      </div>
+
+   </section>
+
+</div>
+
+<div class="shopping-cart">
+
+   <section>
+
+      <div id="close-cart"><span>zatvori</span></div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-1.jpg" alt="">
+         <div class="content">
+            <p>pizza-1 <span>( $3/- x 2 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-3.jpg" alt="">
+         <div class="content">
+            <p>pizza-3 <span>( $2/- x 1 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="content">
+            <p>pizza-6 <span>( $4/- x 2 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-7.jpg" alt="">
+         <div class="content">
+            <p>pizza-7 <span>( $2/- x 1 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <a href="#order" class="btn">naruci </a>
+
+   </section>
+
+</div>
+
+<div class="home-bg">
+
+   <section class="home" id="home">
+
+      <div class="slide-container">
+
+         <div class="slide active">
+            <div class="image">
+               <img src="images/home-img-1.png" alt="">
+            </div>
+            <div class="content">
+               <h3> Pepperoni Pica</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+         <div class="slide">
+            <div class="image">
+               <img src="images/home-img-2.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Pica sa Pecurkama</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+         <div class="slide">
+            <div class="image">
+               <img src="images/home-img-3.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Masline i Pecurke</h3>
+               <div class="fas fa-angle-left" onclick="prev()"></div>
+               <div class="fas fa-angle-right" onclick="next()"></div>
+            </div>
+         </div>
+
+      </div>
+
+   </section>
+
+</div>
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <h1 class="heading">o nama</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/about-1.svg" alt="">
+         <h3>napravljeno s ljubavlju</h3>
+         <p>U svako parce pice ulazemo dosta ljubavi, to cete osetiti na prvom ugrizu!</p>
+         <a href="#menu" class="btn">nas meni</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-2.svg" alt="">
+         <h3>30 minuta cekanja</h3>
+         <p>Naruci sada, i nasa pica ce biti ispred tvojih vrata u roku od 30 minuta!</p>
+         <a href="#menu" class="btn">nas meni</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-3.svg" alt="">
+         <h3>podeli sa prijateljima</h3>
+         <p>Pica je najbolja kada je podelis sa prijateljima!</p>
+         <a href="#menu" class="btn">nas meni</a>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section id="menu" class="menu">
+
+   <h1 class="heading">nas meni</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-1.jpg" alt="">
+         <div class="name">pizza 1</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>4</span>/-</div>
+         <img src="images/pizza-2.jpg" alt="">
+         <div class="name">pizza 2</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-3.jpg" alt="">
+         <div class="name">pizza 3</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>3</span>/-</div>
+         <img src="images/pizza-4.jpg" alt="">
+         <div class="name">pizza 4</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-5.jpg" alt="">
+         <div class="name">pizza 5</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>4</span>/-</div>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="name">pizza 6</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>2</span>/-</div>
+         <img src="images/pizza-7.jpg" alt="">
+         <div class="name">pizza 7</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>3</span>/-</div>
+         <img src="images/pizza-8.jpg" alt="">
+         <div class="name">pizza 8</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">$<span>4</span>/-</div>
+         <img src="images/pizza-9.jpg" alt="">
+         <div class="name">pizza 9</div>
+         <form action="" method="post">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="dodaj u korpu" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+   <h1 class="heading">naruci</h1>
+
+   <form action="" method="post">
+
+      <div class="display-orders">
+         <p>pizza-1 <span>( $3/- x 2 )</span></p>
+         <p>pizza 03 <span>( $2/- x 1 )</span></p>
+         <p>pizza 06 <span>( $4/- x 4 )</span></p>
+         <p>pizza 07 <span>( $2/- x 1 )</span></p>
+      </div>
+
+      <div class="flex">
+         <div class="inputBox">
+            <span>vase ime :</span>
+            <input type="text" name="name" class="box" required placeholder="unesite vase ime" maxlength="20">
+         </div>
+         <div class="inputBox">
+            <span>vas broj :</span>
+            <input type="number" name="number" class="box" required placeholder="unesite vas broj" min="0">
+         </div>
+         <div class="inputBox">
+            <span>metod placanja</span>
+            <select name="method" class="box">
+               <option value="cash on delivery">placanje pouzecem</option>
+               <option value="credit card">kreditna kartica</option>
+               <option value="paytm">paytm</option>
+               <option value="paypal">paypal</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>adresa 01 :</span>
+            <input type="text" name="flat" class="box" required placeholder="broj sprata,kuce..." maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>adresa 02 :</span>
+            <input type="text" name="street" class="box" required placeholder="ime ulice" maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>pin kod :</span>
+            <input type="number" name="pin_code" class="box" required placeholder="npr. 123456" min="0">
+         </div>
+      </div>
+
+      <input type="submit" value="naruci sada" class="btn" name="order">
+
+   </form>
+
+</section>
+
+<!-- order section ends -->
+
+<!-- faq section starts  -->
+
+<section class="faq" id="faq">
+
+   <h1 class="heading">pitanja</h1>
+
+   <div class="accordion-container">
+
+      <div class="accordion active">
+         <div class="accordion-heading">
+            <span>kako to radi?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Usluga dostave hrane je donekle slicna kurirskoj sluzbi u kojoj se narucena hrana isporucuje iz restorana kupcu bilo od strane osoblja restorana ili od strane agenata za dostavu hrane.
+         </p>
+      </div>
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>koliko se ceka dostava?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Realisticno vreme cekanja je 30–45 minuta. Nekada zbog velikih guzvi to moze biti i do 2 sata. Ali dva sata cekanja ne znaci i besplatna pica.
+         </p>
+      </div>
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>mogu li da narucim za velika okupjanja?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Da, mozete naruciti za velika okupkljanja, ali to znaci da cete cekati malo duze.
+         </p>
+      </div>
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>koliko proteina sadrzi?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            U zavisnosti koju picu narucite, unos proteina ce biti drugaciji, ali u proseku u svakoj pici ima 10g proteina.
+         </p>
+      </div>
+
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>da li koristite ulje?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+         Da, ali koristimo visoko kvalitetno biljno ulje. 
+         </p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- faq section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-phone"></i>
+         <h3>broj telefona</h3>
+         <p>+381-631-728-072</p>
+         
+      </div>
+
+      <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>nasa adresa</h3>
+         <p>novi pazar, srbija - 36300</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-clock"></i>
+         <h3>radno vreme</h3>
+         <p>08:00 to 23:00</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <h3>email adresa</h3>
+         <p>quattronp@gmail.com</p>
+         <p>ammar.crnisanin@gmail.com</p>
+      </div>
+
+   </div>
+
+   <div class="credit">
+      &copy; copyright @ 2023 by <span>Ammar Crnisanin</span> 
+   </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
